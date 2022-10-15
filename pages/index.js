@@ -22,17 +22,28 @@ export default function Home() {
       </Head>
 
       <main>
-        <section className="flex min-h-fit md:min-h-screen sec1bg w-full p-10 flex-col bg-white">
+        <section
+          className="flex min-h-fit md:min-h-screen sec1bg w-full p-10 flex-col bg-white"
+          id="home"
+        >
           <nav className="flex w-full justify-between">
             <h1 className="font-bold text-2xl">Natnael Tilahun</h1>
             <ul className="flex-row items-center hidden md:flex">
               <li className="mx-3 text-lg underline underline-offset-8 text-green-600">
-                Home
+                <a href="#home">Home</a>
               </li>
-              <li className="mx-3 text-lg">About</li>
-              <li className="mx-3 text-lg">Services</li>
-              <li className="mx-3 text-lg">Portfolio</li>
-              <li className="mx-3 text-lg">Contact</li>
+              <li className="mx-3 text-lg">
+                <a href="#about">About</a>
+              </li>
+              <li className="mx-3 text-lg">
+                <a href="#services">Services</a>
+              </li>
+              <li className="mx-3 text-lg">
+                <a href="#protfolio">Portfolio</a>
+              </li>
+              <li className="mx-3 text-lg">
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </nav>
           <div className="mt-16 md:mt-40">
@@ -238,7 +249,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-zinc-900 w-full flex flex-col items-center p-10 gap-5">
+        <section
+          className="bg-zinc-900 w-full flex flex-col items-center p-10 gap-5"
+          id="contact"
+        >
           <div className="flex flex-col items-center gap-2">
             <h1 className="text-4xl font-semibold">Get in touch</h1>
             <div className="w-20 bg-green-600 h-0.5"></div>
