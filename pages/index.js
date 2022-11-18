@@ -8,11 +8,39 @@ import duapp from "../public/duapp.jpg";
 
 export default function Home() {
   const [pshow, setPshow] = useState("RNC");
-  const [Fname, setFname] = useState("");
+  const [name, setname] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showmessage, setShowmessage] = useState({ show: false, data: "" });
 
-  const submitMessage = () => {};
+  const submitMessage = () => {
+    if (
+      /^[a-zA-Z]{0,}$/g.test(name) &&
+      /^[a-zA-Z0-9]{3,}\@[a-z]{1,}\.[a-z]{2,}$/g.test(email) &&
+      /^[a-zA-Z0-9@,'.\\;\"() ]{2,}$/g.test(message)
+    ) {
+      fetch("/api/message", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((r) => r.json())
+        .then((j) => {
+          setShowmessage({ show: true, data: j.message });
+          setTimeout(
+            () => setShowmessage({ show: false, ...showmessage }),
+            3000
+          );
+        });
+    }
+    console.log(/^[a-zA-Z0-9@,'.\\;\"()]{2,}$/g.test(message));
+  };
   return (
     <div>
       <Head>
@@ -22,6 +50,15 @@ export default function Home() {
       </Head>
 
       <main>
+        <div
+          className={
+            showmessage.show
+              ? "fixed translate-y-2 transition-transform top-5 left-1/3 w-1/3 right-1/3 bg-white text-center text-teal-900"
+              : "hidden"
+          }
+        >
+          <h1>helo</h1>
+        </div>
         <section
           className="flex min-h-fit md:min-h-screen sec1bg w-full p-10 flex-col bg-white"
           id="home"
@@ -291,8 +328,8 @@ export default function Home() {
                 className="flex-1 bg-zinc-800 p-3"
                 placeholder="Your name"
                 type={"text"}
-                value={Fname}
-                onChange={(e) => setFname(e.target.value)}
+                value={name}
+                onChange={(e) => setname(e.target.value)}
               />
               <input
                 name="email"
