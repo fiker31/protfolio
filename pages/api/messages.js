@@ -5,7 +5,5 @@ export default function handler(req, res) {
     res
       .status(200)
       .json({ data: JSON.parse(fs.readFileSync("messages.json").toString()) });
-  }
-
-  res.status(404).json();
+  } else res.status(404).json();
 }
