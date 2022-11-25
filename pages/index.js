@@ -94,7 +94,7 @@ export default function Home() {
             </ul>
           </nav>
           <div className="mt-16 md:mt-40 text-white">
-            <h1 className="text-5xl font-bold">I'm Natnael Tilahun</h1>
+            <h1 className="text-5xl font-bold">I&apos;m Natnael Tilahun</h1>
             <h2 className="text-2xl font-bold mt-2 mb-5">Software Developer</h2>
             <a
               className="py-3 px-5 bg-green-600 text-sm rounded-3xl"
@@ -116,16 +116,18 @@ export default function Home() {
           <div className="ml-5 md:w-5/6 py-10">
             <h1 className="text-4xl font-semibold mb-5 ">About Me</h1>
             <h3 className="text-lg font-semibold mb-2">
-              Hello I'm <span className="text-green-600">Natnael Tilahun</span>
+              Hello I&apos;m{" "}
+              <span className="text-green-600">Natnael Tilahun</span>
             </h3>
             <p className="text-gray-400">
-              I'm intuitive problem solver with GPA of 3.9, who exposed himself
-              to different technologies and platforms concerining web and mobile
-              application development. Bringing forth experties in design,
-              installation, testing and maintainance of web and mobile system.
-              Proficient in assortment of technologies, including JavaScript,
-              Python, C#, React, Node. Able to effectively self-manage during
-              independent project, as well as collaborate in a team setting.
+              I&apos;m intuitive problem solver with GPA of 3.9, who exposed
+              himself to different technologies and platforms concerining web
+              and mobile application development. Bringing forth experties in
+              design, installation, testing and maintainance of web and mobile
+              system. Proficient in assortment of technologies, including
+              JavaScript, Python, C#, React, Node. Able to effectively
+              self-manage during independent project, as well as collaborate in
+              a team setting.
               <br></br>
               <br></br>
               Beside technical skill, I was a team leader of one on the group in
@@ -152,7 +154,7 @@ export default function Home() {
           </div>
 
           <p className="text-gray-400">
-            The service I'm experienced and can provide.
+            The service I&apos;m experienced and can provide.
           </p>
           <div className="lg:flex-row flex flex-col gap-5 mt-5">
             <div className="flex items-center flex-col bg-zinc-900 lg:w-1/4 rounded-lg p-5 gap-2">
@@ -162,7 +164,7 @@ export default function Home() {
               </h3>
               <p className="text-center text-gray-500">
                 I develope web application using different technologies like
-                Django(python), Node, React, PHP, and C#. I'm proficient in
+                Django(python), Node, React, PHP, and C#. I&apos;m proficient in
                 back-end devlopment as well as front-end development
               </p>
             </div>
@@ -185,8 +187,8 @@ export default function Home() {
                 Penetration Test
               </h3>
               <p className="text-center text-gray-500">
-                I'm certified Penetration tester who can perform both black box
-                and white box testing including code review. I can test web
+                I&apos;m certified Penetration tester who can perform both black
+                box and white box testing including code review. I can test web
                 applications, andorid application, networks and binary files and
                 excutables. I can also integrate this skill into the development
                 phase.
@@ -313,8 +315,8 @@ export default function Home() {
             <div className="w-20 bg-green-600 h-0.5"></div>
           </div>
           <p className="text-gray-400 text-center">
-            I'm available anytime. You can use on of the following options to
-            contact me.<br></br> Thank your for visiting my protfolio.
+            I&apos;m available anytime. You can use on of the following options
+            to contact me.<br></br> Thank your for visiting my protfolio.
           </p>
           <div className="flex flex-col md:flex-row gap-20 mt-10">
             <div className="flex items-center flex-col gap-3">
