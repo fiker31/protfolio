@@ -5,6 +5,14 @@ import { useEffect, useRef, useState } from "react";
 import pro from "../public/pro.png";
 import Link from "next/link";
 import duapp from "../public/duapp.jpg";
+import photostudio from "../public/photostudio.png";
+import avue from "../public/1.png";
+import flyhorizon from "../public/2.png";
+import betoch from "../public/betoch.png";
+import ReactPlayer from 'react-player';
+import { GetServerSideProps } from "next";
+import VideoPlayer from "../component/VideoPlayer";
+
 import { BiCodeAlt } from "react-icons/bi";
 import {
   AiOutlineMobile,
@@ -296,13 +304,51 @@ export default function Home() {
                 pshow == "RNC" ? "md:flex gap-10 w-full max-h-96" : "hidden"
               }
             >
-              <Link href="h">
                 <Image
                   src={duapp}
                   className="cursor-pointer"
                   objectFit="contain"
                 />
-              </Link>
+            </div>
+            <div
+              className={
+                pshow == "RN" ? "md:flex gap-10 w-full max-h-fit" : "hidden"
+              }
+            >
+              <Image
+                  src={avue}
+                  className="cursor-pointer"
+                  objectFit="contain"
+                />
+                <Image
+                  src={flyhorizon}
+                  className="cursor-pointer"
+                  objectFit="contain"
+                />
+              <Image
+                  src={betoch}
+                  className="cursor-pointer"
+                  objectFit="contain"
+                />
+            </div>
+            <div
+              className={
+                pshow == "RD" ? "md:flex gap-10 w-full max-h-96" : "hidden"
+              }
+            >
+                <Image
+                  src={photostudio}
+                  className="cursor-pointer"
+                  objectFit="contain"
+                />
+            </div>
+           
+            <div
+              className={
+                pshow == "MA" ? "md:flex gap-10 w-full max-h-96" : "hidden"
+              }
+            >
+                <VideoPlayer id={""} />
             </div>
           </div>
         </section>
@@ -393,3 +439,8 @@ export default function Home() {
     </div>
   );
 }
+export const getServerSideProps = async (context) => {
+  return {
+    props: { query: context.query },
+  };
+};
