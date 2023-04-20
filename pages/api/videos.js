@@ -12,10 +12,10 @@ export const config = {
 const CHUNK_SIZE_IN_BYTES = 100000; // 1 mb
 
 function getVideoStream(req, res) {
-  const range = req.headers.range;
-
+  let range = req.headers.range;
+  
   if (!range) {
-    return res.status(400).send("Rang must be provided");
+    range = 'bytes=0-';
   }
 
   const videoId = req.query.videoId;
