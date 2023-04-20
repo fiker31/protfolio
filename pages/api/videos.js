@@ -1,5 +1,6 @@
 import busboy from "busboy";
 import fs from "fs";
+import path from "path";
 
 export const config = {
   api: {
@@ -20,7 +21,9 @@ function getVideoStream(req, res) {
 
   const videoId = req.query.videoId;
 
-  const videoPath = `./videos/stt.mp4`;
+  
+  const videoName = 'stt.mp4';
+  const videoPath = path.resolve('videos/', videoName)
 
   const videoSizeInBytes = fs.statSync(videoPath).size;
 
